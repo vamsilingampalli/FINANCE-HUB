@@ -1,0 +1,15 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: "Montserrat", serif; */
+    background-image: url('./table-with-finance-work-stuff-coffee-money-tablet-pen-papers.jpg');
+    background-size:cover; /* Adjusts the image to cover the entire background */
+    background-repeat: no-repeat; /* Ensures the image doesn't repeat */
+    background-position: center; /* Centers the image in the background */
+    min-height: 100vh;
+}
