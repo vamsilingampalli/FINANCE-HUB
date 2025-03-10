@@ -1,0 +1,43 @@
+<!-- 
+<nav class="navbar">
+    <div class="navbar-logo">
+        <img src="https://media-hosting.imagekit.io//8c7b9f62eed944fd/F_20250221_151754_0000.PNG?Expires=1834740112&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=FSRxB2uQ7GkTQkFtEZFrrZwa7gFWdNPF4cWMubHBwSOoLK7WqfxsOlrWqC4MoGpyMMmgH-KI5GIlrRr-3hZizAowISI1-5P7rBnta87J37ajDb0E~Nuxa3oSQ9PrqzIMsOO1-rLNR7BY3N-iTJJ6iQrizUjD-AuwslQEDawk~avKGTsegcoXb5Tryr-OBgKrWDetA~hri05HZygs1MTFuYi5sR6eNXgXwl10Nt6cCNsHv7dZBrRZTfwzArdxSsyuXmNmkBtNaS78xmwGdNYkMefvHcCLaUMBM~zuKUSmhURRTqCf0wpcb5aCNfte0B9vmawW3AwCTyrcQm1N60q9Xw__" alt="FinanceHub Logo" height="50">
+        <a [routerLink]="['']">FinanceHub</a>
+    </div>
+    <ul class="navbar-links">
+        <li><p style="color: white;">{{username}} (CLIENT)</p></li>
+        <li><a [routerLink]="['/userviewsavingsplan']">SavingsPlan</a></li>
+        <li><a [routerLink]="['/userappliedplans']">Applied Plans</a></li>
+        <li><a [routerLink]="['/useraddenquiries']">Add Enquiries</a></li>
+        <li><a [routerLink]="['/userviewenquiry']">My Enquiries</a></li>
+        <li class="dropdown">
+            <label for="feedbacks">Feedbacks</label>
+            <ul class="dropdown-menu">
+                <li><a [routerLink]="['/useraddfeedback']">Add Feedback</a></li>
+                <li><a [routerLink]="['/userviewfeedback']">View Feedbacks</a></li>
+            </ul>
+        </li>
+        <li><button class="logout-button" (click)="logout()">Logout</button></li>
+    </ul>
+</nav> -->
+<nav class="navbar">
+    <div class="navbar-logo">
+        <img src="https://media-hosting.imagekit.io//8c7b9f62eed944fd/F_20250221_151754_0000.PNG?Expires=1834740112&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=FSRxB2uQ7GkTQkFtEZFrrZwa7gFWdNPF4cWMubHBwSOoLK7WqfxsOlrWqC4MoGpyMMmgH-KI5GIlrRr-3hZizAowISI1-5P7rBnta87J37ajDb0E~Nuxa3oSQ9PrqzIMsOO1-rLNR7BY3N-iTJJ6iQrizUjD-AuwslQEDawk~avKGTsegcoXb5Tryr-OBgKrWDetA~hri05HZygs1MTFuYi5sR6eNXgXwl10Nt6cCNsHv7dZBrRZTfwzArdxSsyuXmNmkBtNaS78xmwGdNYkMefvHcCLaUMBM~zuKUSmhURRTqCf0wpcb5aCNfte0B9vmawW3AwCTyrcQm1N60q9Xw__" alt="FinanceHub Logo" height="50">
+        <a [routerLink]="['']">FinanceHub</a>
+    </div>
+    <ul class="navbar-links">
+        <li><p style="color: white;">{{username}} (CLIENT)</p></li>
+        <li><a [routerLink]="['/userviewsavingsplan']">SavingsPlan</a></li>
+        <li><a [routerLink]="['/userappliedplans']">Applied Plans</a></li>
+        <li><a [routerLink]="['/useraddenquiries']">Add Enquiries</a></li>
+        <li><a [routerLink]="['/userviewenquiry']">My Enquiries</a></li>
+        <li class="dropdown" (mouseenter)="toggleDropdown()" (mouseleave)="toggleDropdown()">
+            <label for="feedbacks">Feedbacks</label>
+            <ul class="dropdown-menu" id="dropdown-menu" [ngClass]="{'show': showDropdown}">
+                <li><a [routerLink]="['/useraddfeedback']">Add Feedback</a></li>
+                <li><a [routerLink]="['/userviewfeedback']">View Feedbacks</a></li>
+            </ul>
+        </li>
+        <li><button class="logout-button" (click)="logout()">Logout</button></li>
+    </ul>
+</nav>

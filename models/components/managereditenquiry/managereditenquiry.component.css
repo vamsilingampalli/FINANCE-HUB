@@ -1,0 +1,119 @@
+/* Background styling */
+.bg {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Container styling */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Add margin to space out from the title */
+}
+/* .container h3 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    
+} */
+
+/* Feedback form styling */
+.enquiry {
+    border: 2px solid #344CB7;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px; /* Increase the width for a rectangular shape */
+    box-sizing: border-box;
+    border-radius: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.enquiry:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Textarea styling with animation */
+.enquiry textarea {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    transition: box-shadow 0.3s, transform 0.3s;
+    box-sizing: border-box;
+}
+
+.enquiry textarea:focus {
+    outline: none;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+/* Submit button styling with animation */
+.enquiry button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 25px;
+    background-color: #577BC1;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 15px; /* Add margin to space out from the textarea */
+}
+
+.enquiry button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.enquiry button:hover {
+    background-color: #344CB7;
+    transform: scale(1.05);
+}
+
+.enquiry select {
+    width: 150px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    color: #333;
+}
+
+.enquiry select:focus {
+    outline: none;
+    border-color: #000957;
+    box-shadow: 0 0 5px rgba(87, 123, 193, 0.5);
+}
+
+.enquiry option {
+    padding: 10px;
+    background-color: #fff;
+    color: #333;
+}
+
+.enquiry option:checked {
+    background-color: #344CB7;
+    color: #fff;
+}
+
+
+
+/* Error message styling */
+.text-danger {
+    color: red;
+    font-size: 14px;
+}
+
+h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

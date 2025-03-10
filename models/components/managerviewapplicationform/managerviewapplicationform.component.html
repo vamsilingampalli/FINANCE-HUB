@@ -1,0 +1,60 @@
+<app-adminnav></app-adminnav>
+
+<div class="mydict">
+  <div>
+
+      <label>
+          <input type="radio" name="radio" (click)="sortAscending()" [class.active]="activeSort === 'asc'">
+          <span>Ascending</span>
+      </label>
+      <label>
+          <input type="radio" name="radio" (click)="sortDescending()" [class.active]="activeSort === 'desc'">
+          <span>Decending</span>
+      </label>
+  </div>
+</div>
+
+<div class="table-container">
+  <table>
+    <thead>
+      <tr>
+        <th>Applicant Name</th>
+        <th>Plan Name</th>
+        <th>Applied Amount</th>
+        <th>Application Date</th>
+        <th style="width: 180px;">Status</th>
+        <th>Remarks</th>
+        <th>Proof Document</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let application of planApplications">
+        <td>{{ application.user.username }}</td>
+        <td>{{ application.savingsPlanName }}</td>
+        <td>{{ application.appliedAmount }}</td>
+        <td>{{ application.applicationDate | date }}</td>
+        <td>
+          <ng-container *ngIf="!application.statusUpdated">
+            <button (click)="updateStatus(application.planApplicationId, application, 'Approved')" class="approve-btn">Approve</button>
+            <button (click)="updateStatus(application.planApplicationId, application, 'Rejected')" class="reject-btn">Reject</button>
+          </ng-container>
+          <ng-container *ngIf="application.statusUpdated">
+            {{ application.status }}
+          </ng-container>
+        </td>
+        <td>{{ application.remarks }}</td>
+        <td>
+          <button (click)="viewImage(application)" class="view-image-btn">View Image</button>
+        </td>
+        
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="modal" *ngIf="isModalOpen">
+  <div class="modal-content">
+      <span class="close" (click)="closeModal()">&times;</span>
+      <img [src]="selectedImage" alt="Selected Image">
+  </div>
+</div>

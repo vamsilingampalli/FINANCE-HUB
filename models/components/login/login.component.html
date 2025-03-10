@@ -1,0 +1,22 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <h1>Welcome Back</h1>
+  <form #loginForm="ngForm" (ngSubmit)="login()">
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" placeholder="Enter Email" name="email" [(ngModel)]="email" #emailInput="ngModel" required>
+      <div class="error" *ngIf="emailInput.invalid && (emailInput.dirty || emailInput.touched)">
+        Email is required.
+      </div>
+    </div>
+    <div>
+      <label for="password">Password:</label>
+      <input type="password" id="password" placeholder="Enter Password" name="password" [(ngModel)]="password" #passwordInput="ngModel" required>
+      <div class="error" *ngIf="passwordInput.invalid && (passwordInput.dirty || passwordInput.touched)">
+        Password is required.
+      </div>
+    </div>
+    <button type="submit" [disabled]="loginForm.invalid">Login</button>
+    <p>New to FinanceHub? <a [routerLink]="['/registration']">create one</a></p>
+  </form>
+</div>

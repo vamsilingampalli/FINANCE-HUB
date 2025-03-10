@@ -1,0 +1,24 @@
+<app-adminnav></app-adminnav>
+<h1>User's Feedbacks</h1>
+<div class="table-container">
+    <table>
+        <thead>
+            <tr>
+                <th>S.No</th>
+                <th>User ID</th>
+                <th>Feedback ID</th>
+                <th>Date</th>
+                <th>Feedbacks</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let fb of feedback;index as i">
+                <td>{{i+1}}</td>
+                <td>{{fb.user.userId}}</td>
+                <td>{{fb.feedbackId}}</td>
+                <td>{{fb.date | date}}</td>
+                <td>{{fb.feedbackText}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

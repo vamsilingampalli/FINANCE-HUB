@@ -1,0 +1,60 @@
+<app-adminnav></app-adminnav>
+<form [formGroup]="savingsplanForm" (ngSubmit)="addNewSavingsPlan()">
+    <div>
+        <Label for="name">Plan Name:<span class="required">*</span></Label>
+        <input type="text" name="name" formControlName="name" placeholder="Enter Name" required>
+        <div class="error" *ngIf="f.name.invalid && f.name.touched">
+            <div *ngIf="f.name.errors?.required">Name is required.</div>
+            <div *ngIf="f.name.errors?.pattern">Name should contain only letters.</div>
+            <div *ngIf="f.name.errors?.minlength">Name should contain minimum of 7 letters.</div>
+        </div>
+    </div>
+    <div>
+        <Label for="timeFrame">Time Frame:<span class="required">*</span></Label>
+        <input type="number" name="timeFrame" formControlName="timeFrame" placeholder="Enter Time Frame" required>
+        <div class="error" *ngIf="f.timeFrame.invalid && f.timeFrame.touched">
+            <div *ngIf="f.timeFrame.errors?.required">Time Frame is required.</div>
+            <div *ngIf="f.timeFrame.errors?.min">Enter a positive value</div>
+        </div>
+    </div>
+    <div>
+        <Label for="goalAmount">Goal Amount:<span class="required">*</span></Label>
+        <input type="number" name="goalAmount" formControlName="goalAmount" placeholder="Enter Goal Amount" required>
+        <div class="error" *ngIf="f.goalAmount.invalid && f.goalAmount.touched">
+            <div *ngIf="f.goalAmount.errors?.required">Goal Amount is required.</div>
+            <div *ngIf="f.goalAmount.errors?.min">Amount should be a positive number</div>
+           
+        </div>
+    </div>
+    <div>
+        <Label for="riskLevel">Risk Level:<span class="required">*</span></Label>
+        <select type="text" name="riskLevel" formControlName="riskLevel" required>
+            <option value="" selected disabled>Select Risk Level</option>
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+        </select>
+        <div class="error" *ngIf="f.riskLevel.invalid && f.riskLevel.touched">
+            <div *ngIf="f.riskLevel.errors?.required">Risk Level is required.</div>
+        </div>
+    </div>
+    <div>
+        <Label for="description">Description:<span class="required">*</span></Label>
+        <input type="text" name="description" formControlName="description" placeholder="Enter Description" required>
+        <div class="error" *ngIf="f.description.invalid && f.description.touched">
+            <div *ngIf="f.description.errors?.required">Description is required.</div>
+        </div>
+    </div>
+    <div>
+        <Label for="status">Status:<span class="required">*</span></Label>
+        <select type="text" name="status" formControlName="status" required>
+            <option value="" selected disabled>Select Status</option>
+            <option value="Active">Active</option>
+            <option value="Inactive">Inactive</option>
+        </select>
+        <div class="error" *ngIf="f.status.invalid && f.status.touched">
+            <div *ngIf="f.status.errors?.required">Status is required.</div>
+        </div>
+    </div>
+    <button type="submit">Submit</button>
+</form>

@@ -1,0 +1,76 @@
+/* Container styling */
+.container {
+    padding: 20px;
+    max-width: 800px;
+    margin-top: 10%;
+    margin: auto;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Add Another Enquiry button styling */
+.btn-add {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 25px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-bottom: 20px;
+}
+
+.btn-add:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Table styling with hover effects */
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.styled-table thead {
+    background-color: #f0f0f0;
+}
+
+.styled-table th, .styled-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.styled-table th {
+    background-color: #f0f0f0;
+    color: #333;
+    font-weight: bold;
+}
+
+.styled-table td {
+    background-color: #fff;
+    color: #333;
+}
+
+.styled-table tr:hover td {
+    background-color: #f9f9f9;
+    transition: background-color 0.3s;
+}
+
+/* Delete button styling */
+.btn-delete {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 25px;
+    background-color: #dc3545;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-delete:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+}

@@ -1,0 +1,57 @@
+<app-adminnav></app-adminnav>
+<form #savingsplanForm="ngForm" (ngSubmit)="saveSavingsPlan(savingsplan.savingsPlanId)">
+    <div>
+        <label for="name">Plan Name:<span class="required">*</span></label>
+        <input type="text" name="name" [(ngModel)]="savingsplan.name" required #name="ngModel" placeholder="Enter Name">
+        <div class="error" *ngIf="name.invalid && name.touched">
+            <div *ngIf="name.errors?.required">Name is required.</div>
+            <div *ngIf="name.errors?.pattern">Name should contain only letters.</div>
+        </div>
+    </div>
+    <div>
+        <label for="timeFrame">Time Frame:<span class="required">*</span></label>
+        <input type="text" name="timeFrame" [(ngModel)]="savingsplan.timeFrame" required #timeFrame="ngModel" placeholder="Enter Time Frame">
+        <div class="error" *ngIf="timeFrame.invalid && timeFrame.touched">
+            <div *ngIf="timeFrame.errors?.required">Time Frame is required.</div>
+            <div *ngIf="timeFrame.errors?.pattern">Time Frame should only contain digits.</div>
+        </div>
+    </div>
+    <div>
+        <label for="riskLevel">Risk Level:<span class="required">*</span></label>
+        <select name="riskLevel" [(ngModel)]="savingsplan.riskLevel" #riskLevel="ngModel">
+            <option value="" selected disabled>Select Risk Level</option>
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+        </select>
+        <div class="error" *ngIf="riskLevel.invalid && riskLevel.touched">
+            <div *ngIf="riskLevel.errors?.required">Risk Level is required.</div>
+        </div>
+    </div>
+    <div>
+        <label for="goalAmount">Goal Amount:<span class="required">*</span></label>
+        <input type="text" name="goalAmount" [(ngModel)]="savingsplan.goalAmount" required #goalAmount="ngModel" placeholder="Enter Goal Amount">
+        <div class="error" *ngIf="goalAmount.invalid && goalAmount.touched">
+            <div *ngIf="goalAmount.errors?.required">Goal Amount is required.</div>
+        </div>
+    </div>
+    <div>
+        <label for="description">Description:<span class="required">*</span></label>
+        <input type="text" name="description" [(ngModel)]="savingsplan.description" required #description="ngModel" placeholder="Enter Description">
+        <div class="error" *ngIf="description.invalid && description.touched">
+            <div *ngIf="description.errors?.required">Description is required.</div>
+        </div>
+    </div>
+    <div>
+        <label for="status">Status:<span class="required">*</span></label>
+        <select name="status" [(ngModel)]="savingsplan.status" #status="ngModel">
+            <option value="" selected disabled>Select Status</option>
+            <option value="Active">Active</option>
+            <option value="Inactive">Inactive</option>
+        </select>
+        <div class="error" *ngIf="status.invalid && status.touched">
+            <div *ngIf="status.errors?.required">Status is required.</div>
+        </div>
+    </div>
+    <button type="submit">Submit</button>
+</form>

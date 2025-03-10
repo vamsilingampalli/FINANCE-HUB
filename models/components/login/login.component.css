@@ -1,0 +1,83 @@
+/* CSS for the login form */
+.container{
+  /* background-image: url('https://images.pexels.com/photos/618079/pexels-photo-618079.jpeg?cs=srgb&dl=pexels-apasaric-618079.jpg&fm=jpg');
+  background-size: cover; */
+  /* background-color: #577BC1; */
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0;
+}
+/* body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+} */
+form {
+  background-color: rgba(255, 255, 255, 0.8);;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 400px;
+  margin: 20px auto;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 0.7rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 12px;
+  background-color: #344CB7;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+button[type="submit"]:hover {
+  background-color: #577BC1;
+}
+
+/* button[type="submit"]:disabled {
+  background-color: #ccc;
+} */
+
+.error {
+  color: red;
+  font-size: 0.875rem;
+}
+p {
+  margin: 1rem 0;
+  color: #333;
+  text-align: center; /* Center-align the paragraph */
+}
+
+p a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+p a:hover {
+  color: #0056b3;
+}
+
+

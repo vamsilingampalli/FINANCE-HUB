@@ -1,0 +1,29 @@
+<app-usernav></app-usernav>
+<div class="bg">
+    <h1>Add Feedback</h1>
+    <div class="container">
+        <div class="feedback-form">
+            <label for="feedbackText">Feedback<span>*</span></label>
+            <form #feedbackForm="ngForm" (ngSubmit)="addFeedback(feedbackForm)">
+                <textarea id="feedbackText" cols="30" rows="10" name="feedbackText" required #feedbackText="ngModel"
+                    [(ngModel)]="feedback.feedbackText" class="textarea" required maxlength="200" minlength="50"></textarea>
+                <div *ngIf="feedbackText?.errors?.required && (feedbackText?.touched || feedbackText?.dirty)"
+                    class="text-danger">
+                    <b>Feedback is Required</b>
+                </div>
+                <div *ngIf="feedbackText?.errors?.maxlength" class="text-danger">
+                    <b>Feedback Should not Exceed 200 Words</b>
+                </div>
+                <div *ngIf="feedbackText?.errors?.minlength" class="text-danger">
+                    <b>Feedback Should Contain Atleast 50 Words</b></div>
+                <button type="submit" [disabled]="feedbackForm.invalid" class="btn-submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <div *ngIf="showPopup" class="popup">
+        <div class="popup-content">
+            <p>Feedback Added Successfully!!</p>
+            <button (click)="closePopup()" class="btn-ok">OK</button>
+        </div>
+    </div>
+</div>

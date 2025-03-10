@@ -1,0 +1,34 @@
+
+
+
+<app-adminnav></app-adminnav>
+
+
+<div class="container">
+    <h3>User Enquiries</h3>
+    <div>
+        <input type="text" name="search" class="rounded-search-bar" [(ngModel)]="searchText" placeholder="Search Enquiry">
+    </div>
+    <div>
+        <table class="animated-table">
+            <thead>
+                <tr>
+                    <th>S.No</th>
+                    <th>User name</th>
+                    <th>Enquiry Message</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let enquiry of (enquiries | searchEnquiry: searchText); index as i">
+                    <td>{{i+1}}</td>
+                    <td>{{enquiry.user.username}}</td>
+                    <td>{{enquiry.message}}</td>
+                    <td>
+                        <button type="button" [routerLink]="['/managereditenquiry', enquiry.enquiryId]">Edit</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

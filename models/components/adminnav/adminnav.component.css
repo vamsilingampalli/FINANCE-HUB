@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000957;
+    padding: 1rem;
+}
+
+.navbar-logo a {
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.navbar-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    z-index: 1000;
+    align-items: center; /* Align items horizontally */
+}
+
+.navbar-links li {
+    margin-left: 1rem;
+    position: relative;
+    display: flex; /* Use flexbox for dropdown alignment */
+    align-items: center; /* Center items vertically */
+}
+
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-links a:hover {
+    background-color: #577BC1;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white; /* Light blue background for the dropdown */
+    color: #333;
+    border: 1px solid #333;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden; /* Ensure smooth animation */
+    opacity: 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease; /* Smooth animation */
+    max-height: 0;
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+}
+
+.dropdown-content li {
+    padding: 0; /* Remove padding from the list items */
+    background-color: white; /* Ensure each item has a light blue background */
+    margin-right: 15px;
+}
+
+.dropdown-content li a {
+    color: #333; /* Set link color to dark grey */
+    text-align: left; /* Ensure text is left-aligned */
+    padding: 0.5rem 1rem; /* Add padding to the links for spacing */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    max-height: 200px; /* Adjust based on your content's height */
+}
+
+label {
+    color: white;
+}
+
+li p {
+    color: white;
+}
+
+.logout-button {
+    background-color: #d9534f; /* Set the background color to a red shade */
+    color: white; /* Set the text color to white */
+    border: none; /* Remove the border */
+    padding: 0.5rem 1rem; /* Add some padding */
+    border-radius: 4px; /* Add rounded corners */
+    cursor: pointer; /* Change the cursor to a pointer on hover */
+    transition: background-color 0.3s ease; /* Add a smooth transition effect */
+}
+
+.logout-button:hover {
+    background-color: #c9302c; /* Darken the background color on hover */
+}

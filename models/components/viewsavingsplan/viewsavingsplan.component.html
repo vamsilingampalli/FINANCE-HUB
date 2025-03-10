@@ -1,0 +1,24 @@
+<app-adminnav></app-adminnav>
+<input type="text" class="rounded-search-bar" placeholder="Search plans" [(ngModel)]="searchText" (input)="filterPlans()">
+<div *ngIf="showConfirmDialog" class="popup-overlay">
+    <div class="popup-content">
+        <h2>Confirm Delete</h2>
+        <p>Are you sure you want to delete this savings plan?</p>
+        <button (click)="confirmDelete(true)">Yes</button>
+        <button (click)="confirmDelete(false)">No</button>
+    </div>
+</div>
+<div class="card-container">
+  <div class="card" *ngFor="let savingsPlan of filteredPlans">
+    <div class="card-content">
+      <h3>{{savingsPlan.name}}</h3>
+      <p><strong>Goal Amount:</strong> {{savingsPlan.goalAmount}}</p>
+      <p><strong>Time Frame:</strong> {{savingsPlan.timeFrame}} years</p>
+      <p><strong>Risk Level:</strong> {{savingsPlan.riskLevel}}</p>
+      <p><strong>Description:</strong> {{savingsPlan.description}}</p>
+      <p><strong>Status:</strong> {{savingsPlan.status}}</p>
+      <button (click)="navigateToUpdateSavingsPlan(savingsPlan.savingsPlanId)">Edit</button>
+      <button class="delete-btn" (click)="deleteSavingsPlan(savingsPlan.savingsPlanId)">Delete</button>
+    </div>
+  </div>
+</div>

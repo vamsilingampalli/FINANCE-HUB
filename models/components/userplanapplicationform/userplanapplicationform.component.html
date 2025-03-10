@@ -1,0 +1,50 @@
+<app-usernav></app-usernav>
+<div class="container">
+  <button type="button" class="btn-back" routerLink="/userviewsavingsplan">← Back</button>
+  <h1>Plan Application Form</h1>
+
+  <form [formGroup]="planApplicationForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="appliedAmount">Applied Amount:<span style="color:red">*</span></label>
+      <input type="number" id="appliedAmount" class="form-control" formControlName="appliedAmount" required>
+      <div *ngIf="planApplicationForm.get('appliedAmount').invalid && planApplicationForm.get('appliedAmount').touched" class="text-danger">
+        Enter a valid amount!!
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="applicationDate">Application Date:<span style="color:red">*</span></label>
+      <input type="date" id="applicationDate" class="form-control" formControlName="applicationDate" required>
+      <div *ngIf="planApplicationForm.get('applicationDate').invalid && planApplicationForm.get('applicationDate').touched" class="text-danger">
+        Application Date is required and cannot be in the past.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="remarks">Remarks:</label>
+      <textarea id="remarks" class="form-control" formControlName="remarks"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="proofDocument">Proof Document:<span style="color:red">*</span></label>
+      <input type="file" id="proofDocument" class="form-control" (change)="onFileChange($event)" required>
+      <div *ngIf="planApplicationForm.get('proofDocument').invalid && planApplicationForm.get('proofDocument').touched" class="text-danger">
+        Proof Document is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="savingsPlanName">Select Savings Plan:<span style="color:red">*</span></label>
+      <select id="savingsPlanName" class="form-control" formControlName="savingsPlanName">
+        <option *ngFor="let plan of savingsPlans" [value]="plan.name">{{ plan.name }}</option>
+      </select>
+    </div>
+
+    <button type="submit" class="btn-submit" [disabled]="planApplicationForm.invalid">Submit</button>
+  </form>
+
+  <div *ngIf="isSubmitted" class="success-message">
+    <p>Form submitted successfully!</p>
+    <button class="btn-submit" (click)="redirectToAnotherRoute()">Go to Application List</button>
+  </div>
+</div>

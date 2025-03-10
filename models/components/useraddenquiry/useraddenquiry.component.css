@@ -1,0 +1,63 @@
+/* Container styling */
+.container {
+    padding: 20px;
+    max-width: 600px;
+    border:1px solid #577BC1;
+    margin: auto;
+    margin-top: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Prevent overflow */
+  }
+  
+  /* Form group styling */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  /* Textarea styling */
+  textarea {
+    /* border:1px solid #344CB7; */
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    transition: box-shadow 0.3s, transform 0.3s;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  }
+  
+  textarea:focus {
+    outline: none;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+  }
+  
+  /* Animated submit button */
+  .btn-submit {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 25px;
+    background-color: #577BC1; /* Updated background color */
+    color: #fff; /* Text color */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .btn-submit:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .btn-submit:hover {
+    background-color: #344CB7; /* Updated hover background color */
+    transform: scale(1.05);
+  }
+  
+  /* Error message styling */
+  .text-danger {
+    color: red;
+    font-size: 14px;
+  }

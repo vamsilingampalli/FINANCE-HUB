@@ -1,0 +1,16 @@
+<app-usernav></app-usernav>
+<div class="container">
+    <h3>Add Enquiry</h3>
+    <form #enquiryForm="ngForm" (ngSubmit)="addEnquiry()">
+        <div class="form-group">
+            <label>Message:</label>
+            <textarea name="message" cols="30" rows="10" [(ngModel)]="enquiry.message" required #message="ngModel"></textarea>
+            <div *ngIf="message.touched && message.invalid" class="text-danger">
+                Message is required.
+            </div>
+        </div>
+        <div>
+            <button type="submit" class="btn-submit">Add Enquiry</button>
+        </div>
+    </form>
+</div>

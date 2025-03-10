@@ -1,0 +1,16 @@
+
+<app-usernav></app-usernav>
+<input type="text" class="rounded-search-bar" placeholder="Search plans" [(ngModel)]="searchText" (input)="filterPlans()">
+<div class="card-container">
+  <div class="card" *ngFor="let savingsPlan of filteredPlans">
+    <div class="card-content">
+      <h3>{{savingsPlan.name}}</h3>
+      <p><strong>Goal Amount:</strong> {{savingsPlan.goalAmount}}</p>
+      <p><strong>Time Frame:</strong> {{savingsPlan.timeFrame}} years</p>
+      <p><strong>Risk Level:</strong> {{savingsPlan.riskLevel}}</p>
+      <p><strong>Description:</strong> {{savingsPlan.description}}</p>
+      <p><strong>Status:</strong> {{savingsPlan.status}}</p>
+      <button class="apply-button" (click)="navigateToApplicationForm()">Apply</button>
+    </div>
+  </div>
+</div>

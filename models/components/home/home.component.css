@@ -1,0 +1,154 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+.hello {
+  background-size: 100%;
+  position: relative;
+  /* width: 100%;
+  height: 100%; */
+  /* background-image: url('https://discovertemplate.com/wp-content/uploads/2020/11/DT_G55_Finance-Animated-GIF-Icon-Pack-2.gif'); */
+  /* background-image: url('https://media-hosting.imagekit.io//33de5582c8554723/f4.jpg?Expires=1834823736&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=uOh8jNZrxRVP2Z69E~jHMPSlkStjb8ewEGNShwiPkdgruaJ5MV5zspQM4VeImCsf9M32ESplX8N2an246H~329ndXQVakVGdevGQfGC0jIkoqtEAx6a-Yj5TdF-FSgl4YEVTuPv91~vVbqaxPmMlF4CAuZkY0lE5cUTB9ENVu2D7NBv6Fgh-5bC-ske0bgEaOcYxFHewF5B0HUATJKGzRLzb9le1559hPnrkWsTWm4IbZqTBOg6KwnxzawnDDwaLov4DCer-lBDD0~n~OvqKGKi4~ySVDwj1y0xIWhPuHWCRFPIw68yfAKj9NgnVVQQ9PCKzyzEgDx-aWQe6j~LvnA__'); */
+  /* background-image: url('https://globaleducation.s3.ap-south-1.amazonaws.com/globaledu/gif/financial-management-advisory-services.gif'); */
+   /* background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/fs/7b8cb873573495.5e15f97e9cfb0.gif');  */
+  /* background-size: cover; */
+  /* animation: playGif 4s steps(10) infinite; */
+}
+
+/* @keyframes playGif {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -3000px 0;
+  }
+} */
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+  text-align: center;
+  /* Center-align text */
+}
+
+/* Header Styles */
+/* header {
+  background:  #344CB7;
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+} */
+
+/* header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  animation: fadeIn 1s ease-in-out;
+}
+
+header p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  opacity: 0.9;
+  animation: fadeIn 1.5s ease-in-out;
+} */
+
+/* Container Styles */
+.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  text-align: center;
+  /* Center-align text */
+}
+
+/* Section Styles */
+.intro,
+.description {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  /* Center-align text */
+}
+
+.intro:hover,
+.description:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.intro h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.intro p,
+.description p {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  color: #555;
+}
+
+.description p:first-of-type {
+  margin-top: 1rem;
+}
+
+/* Footer Styles */
+footer {
+  background: #2c3e50;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 0;
+  opacity: 0.8;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  .intro h2 {
+    font-size: 1.5rem;
+  }
+
+  .intro p,
+  .description p {
+    font-size: 1rem;
+  }
+}

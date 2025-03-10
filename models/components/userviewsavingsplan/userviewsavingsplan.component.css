@@ -1,0 +1,77 @@
+
+/* Animated search bar with hover effect */
+.rounded-search-bar {
+  width: 50%;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 50px;
+  margin-left: 25%;
+  margin-top: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  transition: box-shadow 0.3s, transform 0.3s;
+  margin-bottom: 20px;
+}
+
+.rounded-search-bar:focus {
+  outline: none;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+/* Card container styling */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; /* Center align cards */
+}
+
+/* Card styling */
+.card {
+  flex: 0 1 300px; /* Fixed width for each card */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Apply button styling with animations */
+.apply-button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 25px;
+  background-color: rgb(87, 123, 193); /* Updated background color */
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.apply-button:hover {
+  background-color: rgb(52, 76, 183); /* Updated hover background color */
+  transform: scale(1.05);
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    flex: 1 1 calc(100% - 20px);
+  }
+}

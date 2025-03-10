@@ -1,0 +1,113 @@
+/* Background styling */
+.bg {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Container styling */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Feedback form styling */
+.feedback-form {
+  border: 2px solid #344CB7;
+  padding: 20px;
+  width: 100%;
+  max-width: 600px; /* Increase the width for a rectangular shape */
+  box-sizing: border-box;
+  border-radius: 20px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin-top: 20px; /* Add margin to space out from the title */
+}
+
+.feedback-form:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Textarea styling with animation */
+.textarea {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  transition: box-shadow 0.3s, transform 0.3s;
+  box-sizing: border-box;
+}
+
+.textarea:focus {
+  outline: none;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+/* Submit button styling with animation */
+.btn-submit {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 25px;
+  background-color: #577BC1;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  margin-top: 15px; /* Add margin to space out from the textarea */
+}
+
+.btn-submit:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.btn-submit:hover {
+  background-color: #344CB7;
+  transform: scale(1.05);
+}
+
+/* Popup styling */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.btn-ok {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 25px;
+  background-color: #28a745;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-ok:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+/* Error message styling */
+.text-danger {
+  color: red;
+  font-size: 14px;
+}

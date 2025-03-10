@@ -1,0 +1,120 @@
+.navbar-logo a, .navbar-logo img {
+  width: 50px; /* Adjust to desired size */
+  height: 50px; /* Adjust to desired size */
+  color: white;
+  font-size: 2.2rem;
+  text-decoration: none;
+  display: inline-block; /* Ensures elements stay on the same line */
+  margin-left: 10px;
+  vertical-align: middle; /* Aligns the elements vertically */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000957;
+  padding: 1rem;
+}
+
+.navbar-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center; /* Align items horizontally */
+}
+
+.navbar-links li {
+  margin-left: 1rem;
+  margin-right: 15px; /* Add margin-right */
+  position: relative;
+  display: flex; /* Use flexbox for dropdown alignment */
+  align-items: center; /* Center items vertically */
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px; /* Make corners 8px */
+  transition: background-color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  background-color: #577BC1;
+}
+
+/* Dropdown Fix */
+.dropdown-menu {
+  display: block; /* Always keep it block, use visibility & opacity instead */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 0.5rem;
+  background-color: white;
+  color: black;
+  border: 1px solid #333;
+  list-style: none;
+  padding: 0.5rem 0;
+  border-radius: 8px; /* Make corners 8px */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none; /* Prevent interaction when hidden */
+}
+
+/* When hovering over the dropdown label or dropdown itself */
+.dropdown:hover .dropdown-menu,
+.dropdown-menu:hover {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto; /* Allow interactions */
+}
+
+.dropdown-menu li {
+  padding: 0.5rem 1rem;
+  background-color: white;
+}
+
+.dropdown-menu li a {
+  color: #333; /* Set link color to dark grey */
+}
+
+@keyframes dropdown-animation {
+  from {
+      opacity: 0;
+      transform: translateY(-10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+label {
+  color: white;
+}
+
+.logout-button {
+  background-color: #d9534f; /* Set the background color to a red shade */
+  color: white; /* Set the text color to white */
+  border: none; /* Remove the border */
+  padding: 0.5rem 1rem; /* Add some padding */
+  border-radius: 8px; /* Make corners 8px */
+  cursor: pointer; /* Change the cursor to a pointer on hover */
+  transition: background-color 0.3s ease; /* Add a smooth transition effect */
+}
+
+.logout-button:hover {
+  background-color: #c9302c; /* Darken the background color on hover */
+}

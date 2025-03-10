@@ -1,0 +1,50 @@
+/* CSS for the navbar */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000957;
+  padding: 1rem;
+}
+
+.navbar-logo a, .navbar-logo img {
+  width: 50px; /* Adjust to desired size */
+  height: 50px; /* Adjust to desired size */
+  color: white;
+  font-size: 2.2rem;
+  text-decoration: none;
+  display: inline-block; /* Ensures elements stay on the same line */
+  margin-left: 10px;
+  vertical-align: middle; /* Aligns the elements vertically */
+}
+.navbar-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar-links li {
+  margin-left: 1rem;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.navbar-links a:hover {
+  background-color: #344CB7;
+  transform: translateY(-2px);
+}

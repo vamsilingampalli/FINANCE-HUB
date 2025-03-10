@@ -1,0 +1,100 @@
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; /* Center cards to avoid stretching */
+}
+
+.card {
+  flex: 0 1 300px; /* Adjust flex calculation for margin */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden;
+  background-color: #fff;
+  margin: 10px; /* Add margin to prevent edge overflow */
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 25px;
+  background-color: rgb(87, 123, 193); /* Updated background color */
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  margin-right: 10px; /* Added space between buttons */
+}
+
+button:hover {
+  background-color: rgb(52, 76, 183);
+  transform: scale(1.05);
+}
+
+button.delete-btn {
+  background-color: rgb(193, 87, 87); /* Red color for Delete button */
+}
+
+button.delete-btn:hover {
+  background-color: rgb(183, 52, 52);
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 calc(50% - 40px); /* Adjust flex calculation for margin */
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    flex: 1 1 calc(100% - 40px); /* Adjust flex calculation for margin */
+  }
+}
+
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.rounded-search-bar {
+  width: 50%;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  margin-bottom: 20px;
+  margin-top: 50px;
+  margin-left: 25%;
+  transition: box-shadow 0.3s;
+}
+
+.rounded-search-bar:focus {
+  outline: none;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}

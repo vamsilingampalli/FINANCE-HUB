@@ -1,0 +1,46 @@
+<app-usernav></app-usernav>
+<div class="mydict">
+    <div>
+ 
+        <label>
+            <input type="radio" name="radio" (click)="sortAscending()" [class.active]="activeSort === 'asc'">
+            <span>Ascending</span>
+        </label>
+        <label>
+            <input type="radio" name="radio" (click)="sortDescending()" [class.active]="activeSort === 'desc'">
+            <span>Decending</span>
+        </label>
+    </div>
+</div>
+ 
+<table class="styled-table">
+    <thead>
+        <tr>
+            <th>Plan Name</th>
+            <th>Applied Amount</th>
+            <th>Application Date</th>
+            <th>Remarks</th>
+            <th>Status</th>
+            <th>Proof Document</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let application of planApplications">
+            <td>{{ application.savingsPlanName }}</td>
+            <td>{{ application.appliedAmount }}</td>
+            <td>{{ application.applicationDate | date }}</td>
+            <td>{{ application.remarks }}</td>
+            <td>{{ application.status }}</td>
+            <td>
+                <a href="javascript:void(0)" (click)="viewImage(application.proofDocument)">View Image</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+ 
+<div class="modal" *ngIf="isModalOpen">
+    <div class="modal-content">
+        <span class="close" (click)="closeModal()">&times;</span>
+        <img [src]="selectedImage" alt="Selected Image">
+    </div>
+</div>

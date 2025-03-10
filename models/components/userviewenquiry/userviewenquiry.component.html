@@ -1,0 +1,27 @@
+<app-usernav></app-usernav>
+<div class="container">
+    <button type="button" class="btn-add" routerLink="/useraddenquiries">Add Another Enquiry</button>
+    <h3>User Enquiries</h3>
+    <div>
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th>S.No</th>
+                    <th>Enquiry Message</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let enquiry of enquiries;index as i">
+                    <td>{{i+1}}</td>
+                    <td>{{enquiry.message}}</td>
+                    <td>{{enquiry.status}}</td>
+                    <td>
+                        <button class="btn-delete" (click)="deleteEnquiry(enquiry.enquiryId)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+<app-usernav></app-usernav>
+<h1>My Feedbacks</h1>
+<table class="styled-table">
+    <thead>
+        <tr>
+            <th>S.No</th>
+            <th>Date</th>
+            <th>Feedbacks</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let fb of feedback">
+            <td>{{fb.feedbackId}}</td>
+            <td>{{fb.date | date: 'dd-MM-yyyy' }}</td>
+            <td>{{fb.feedbackText}}</td>
+            <td><button class="btn-delete" (click)="confirmDelete(fb.feedbackId)">Delete</button></td>
+        </tr>
+    </tbody>
+</table>
+
+<div *ngIf="showPopup" class="popup">
+    <div class="popup-content">
+        <p>Are You Sure, You want to Delete?</p>
+        <button (click)="deleteFeedback()" class="btn-confirm">Yes, Delete</button>
+        <button (click)="closePopup()" class="btn-cancel">Cancel</button>
+    </div>
+</div>

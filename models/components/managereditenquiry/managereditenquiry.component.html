@@ -1,0 +1,22 @@
+<app-adminnav></app-adminnav>
+<h3>Edit User Enquiry</h3>
+<div class="container">
+    <div class="enquiry">
+        <div>
+            <label>Enquiry Message:</label>
+        </div>
+        <div>
+            <textarea cols="30" rows="10" [(ngModel)]="enquiry.message"></textarea>
+        </div>
+        <div>
+            <select [(ngModel)]="enquiry.status">
+                <option value="" selected disabled>Status</option>
+                <option value="Resolved">Resolved</option>
+                <option value="Pending">Pending</option>
+            </select>
+        </div>
+        <div>
+            <button type="button" (click)="updateEnquiry(enquiry.enquiryId, enquiry.status)">Update</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+
+<div *ngIf="isManager && isLoggedIn">
+    <app-adminnav></app-adminnav>
+</div>
+<div *ngIf="isClient && isLoggedIn">
+    <app-usernav></app-usernav>
+</div>
+<div *ngIf="!isLoggedIn">
+    <app-navbar></app-navbar>
+</div>
+<div class="hello">
+    <header>
+    </header>
+    <div class="container">
+        <section class="intro">
+            <h2>Welcome to FinanceHub</h2>
+            <p>Achieve financial security and growth with our comprehensive savings plans.</p>
+            <section>
+                <p>At FinanceHub, we are dedicated to helping you reach your financial goals with ease and confidence. Our platform offers a wide range of savings plans that are designed to meet the diverse needs of our users. Whether you're looking to save for a rainy day, plan for retirement, or invest for future growth, FinanceHub has the right plan for you.
+                Explore our user-friendly interface to compare and choose the best savings plans that suit your financial objectives. With FinanceHub, you can seamlessly apply for savings plans, manage your investments, and track your progress all in one place. Join us today and take control of your financial future with the support and expertise of FinanceHub.</p>
+            </section>
+        </section>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 FinanceHub. All rights reserved. | <a href="privacy-policy-url">Privacy Policy</a> | <a href="terms-of-service-url">Terms of Service</a></p>
+    </footer>
+</div>
